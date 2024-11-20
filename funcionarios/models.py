@@ -18,3 +18,12 @@ class Funcionario(Pessoa):
         verbose_name_plural = 'funcionarios'
     def __str__(self):
         return self.cpf
+
+class Cliente(Pessoa):
+    endereco = models.TextField(max_length=1000)
+    telefone = models.CharField(max_length=20)
+    class Meta:
+        verbose_name = 'cliente'
+        verbose_name_plural = 'clientes'
+    def __str__(self):
+        return self.endereco

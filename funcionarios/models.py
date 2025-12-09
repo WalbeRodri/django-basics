@@ -27,3 +27,8 @@ class Cliente(Pessoa):
         verbose_name_plural = 'clientes'
     def __str__(self):
         return self.endereco
+    
+    
+class Samara(Pessoa):
+    cpf = models.CharField(max_length = 11)
+    nome = models.CharField(max_length = 40)    

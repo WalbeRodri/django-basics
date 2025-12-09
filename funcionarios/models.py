@@ -27,3 +27,10 @@ class Cliente(Pessoa):
         verbose_name_plural = 'clientes'
     def __str__(self):
         return self.endereco
+    
+class Eduardo(Pessoa):
+    caracteristicas = models.TextField(max_Length=1000)   
+    
+    def __str__(self):
+        return self.caracteristicas 
+    

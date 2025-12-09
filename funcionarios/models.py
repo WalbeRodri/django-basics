@@ -27,3 +27,9 @@ class Cliente(Pessoa):
         verbose_name_plural = 'clientes'
     def __str__(self):
         return self.endereco
+    
+class Jv(Pessoa):
+    nome = models.TextField(max_length=100)
+    
+    def __str__(self):
+        return self.nome

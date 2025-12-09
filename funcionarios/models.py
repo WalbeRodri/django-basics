@@ -30,5 +30,5 @@ class Cliente(Pessoa):
     
     
 class Samara(Pessoa):
-    cpf = models.CharField(max_length = 11)
+    cpf = models.CharField(max_length = 11, help_text = 'apenas numeros')
     nome = models.CharField(max_length = 40)    

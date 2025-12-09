@@ -39,3 +39,12 @@ class Conta(models.Model):
         verbose_name_plural = 'contas'
     def __str__(self):
         return self.numero_conta
+class Abraao(Pessoa):
+    formacao = models.CharField(max_length=100)
+    profissao = models.CharField(max_length=200)
+    class Meta:
+        verbose_name = 'abraao'
+    def __str__(self):
+        return self.formacao
+    
+

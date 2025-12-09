@@ -27,6 +27,7 @@ class Cliente(Pessoa):
         verbose_name_plural = 'clientes'
     def __str__(self):
         return self.endereco
+
     
 
 class Dominique(Pessoa):
@@ -89,6 +90,7 @@ class Conta(models.Model):
         verbose_name = 'conta'
         verbose_name_plural = 'contas'
     def __str__(self):
+        return self.numero_conta
         return self.numero_conta
 class Abraao(Pessoa):
     formacao = models.CharField(max_length=100)

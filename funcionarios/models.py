@@ -27,6 +27,13 @@ class Cliente(Pessoa):
         verbose_name_plural = 'clientes'
     def __str__(self):
         return self.endereco
+
+SUPERPODER_CHOICES = {
+    'superforca': 'Superforça',
+    'supervelocidade': 'Supervelocidade',
+}
+class Heroi_Vicente(Pessoa):
+    superpoder = models.CharField(verbose_name='Superpoder', choices=SUPERPODER_CHOICES)
         return self.endereco
     
     

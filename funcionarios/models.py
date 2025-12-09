@@ -36,4 +36,3 @@ class Dominique(Pessoa):
         verbose_name = 'Domi'      
     def __str__(self):
         return self.nome
-

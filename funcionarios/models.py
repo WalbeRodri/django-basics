@@ -32,4 +32,4 @@ class Jv(Pessoa):
     nome = models.TextField(max_length=100)
      
     def __str__(self):
-        return self.nome 
+        return self.nome

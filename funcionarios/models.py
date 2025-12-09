@@ -34,3 +34,6 @@ SUPERPODER_CHOICES = {
 }
 class Heroi_Vicente(Pessoa):
     superpoder = models.CharField(verbose_name='Superpoder', choices=SUPERPODER_CHOICES)
+
+    def __str__(self):
+        return f"Herói com {self.superpoder}"

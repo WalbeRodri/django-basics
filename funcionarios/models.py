@@ -28,6 +28,11 @@ class Cliente(Pessoa):
     def __str__(self):
         return self.endereco
 
+class pedro(Pessoa):
+    saldo = models.IntegerField()
+
+    def __str__(self):
+        return f'{self.name} = {self.saldo}'
     
 
 class Dominique(Pessoa):

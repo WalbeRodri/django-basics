@@ -27,6 +27,7 @@ class Cliente(Pessoa):
         verbose_name_plural = 'clientes'
     def __str__(self):
         return self.endereco
+        return self.endereco
     
     
 class Cinema(Pessoa):

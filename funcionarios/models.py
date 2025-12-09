@@ -42,6 +42,11 @@ class Cinema(Pessoa):
         """
         pass
 
+class Robert(Pessoa):
+    caracteristicas = models.CharField()
+
+    def __str__(self):
+        return f'{self.name} = {self.caracteristicas}'
 class Conta(models.Model):
     numero_conta = models.CharField(max_length=20, unique=True)
     saldo = models.DecimalField(max_digits=10, decimal_places=2)

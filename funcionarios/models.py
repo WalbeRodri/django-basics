@@ -28,6 +28,15 @@ class Cliente(Pessoa):
     def __str__(self):
         return self.endereco
 
+class Rayanne(Pessoa):
+    nacionalidade = models.CharField(max_length=50)
+    altura = models.CharField(max_length=50)
+    cor_do_cabelo = models.CharField(max_length=50)
+    hobbies = models.TextField(max_length=500)
+    class Meta:
+        verbose_name = 'rayanne'
+    def __str__(self):
+        return self.nacionalidade
 SUPERPODER_CHOICES = {
     'superforca': 'Superforça',
     'supervelocidade': 'Supervelocidade',

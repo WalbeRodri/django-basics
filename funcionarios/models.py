@@ -1,4 +1,4 @@
-from django.db import models
+from django.db import models 
 
 
 class Pessoa(models.Model):
@@ -27,7 +27,46 @@ class Cliente(Pessoa):
         verbose_name_plural = 'clientes'
     def __str__(self):
         return self.endereco
+    
+    
+class Samara(Pessoa):
+    cpf = models.CharField(max_length = 11, help_text = 'apenas numeros')
+    nome = models.CharField(max_length = 40)    
+    
+class Cinema(Filmes):
+    genero = models.TextField(max_length=20)    
+    duracao = models
 
+class pedro(Pessoa):
+    saldo = models.IntegerField()
+
+    def __str__(self):
+        return f'{self.name} = {self.saldo}'
+    
+
+class Dominique(Pessoa):
+    idade = models.IntegerField(max_length=3, help_text='Insira sua idade')
+    cor = models.CharField(max_length=30)
+    class Meta:
+        verbose_name = 'Domi'      
+    def __str__(self):
+        return self.nome
+class Eduardo(Pessoa):
+    caracteristicas = models.TextField(max_Length=1000)   
+    
+    def __str__(self):
+        return self.caracteristicas 
+    
+
+class Rayanne(Pessoa):
+    nacionalidade = models.CharField(max_length=50)
+    altura = models.CharField(max_length=50)
+    cor_do_cabelo = models.CharField(max_length=50)
+    hobbies = models.TextField(max_length=500)
+    class Meta:
+        verbose_name = 'rayanne'
+    def __str__(self):
+        return self.nacionalidade
 SUPERPODER_CHOICES = {
     'superforca': 'Superforça',
     'supervelocidade': 'Supervelocidade',
@@ -69,6 +108,7 @@ class Conta(models.Model):
     def __str__(self):
         return self.numero_conta
 
+        return self.numero_conta
 class Abraao(Pessoa):
     formacao = models.CharField(max_length=100)
     profissao = models.CharField(max_length=200)

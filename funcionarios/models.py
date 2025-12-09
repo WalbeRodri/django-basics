@@ -27,3 +27,12 @@ class Cliente(Pessoa):
         verbose_name_plural = 'clientes'
     def __str__(self):
         return self.endereco
+    
+class Dominique(Pessoa):
+    idade = models.IntegerField(max_length=3, help_text='Insira sua idade')
+    cor = models.CharField(max_length=30)
+    class Meta:
+        verbose_name = 'Domi'      
+    def __str__(self):
+        return self.nome
+    

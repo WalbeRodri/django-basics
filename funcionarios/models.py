@@ -73,8 +73,9 @@ SUPERPODER_CHOICES = {
 }
 class Heroi_Vicente(Pessoa):
     superpoder = models.CharField(verbose_name='Superpoder', choices=SUPERPODER_CHOICES)
-        return self.endereco
-    
+
+    def __str__(self):
+        return f"Herói com {self.superpoder}"
     
 class Cinema(Pessoa):
     terror = models.CharField(max_length=20)
@@ -94,6 +95,7 @@ class Robert(Pessoa):
 
     def __str__(self):
         return f'{self.name} = {self.caracteristicas}'
+
 class Conta(models.Model):
     numero_conta = models.CharField(max_length=20, unique=True)
     saldo = models.DecimalField(max_digits=10, decimal_places=2)
@@ -105,6 +107,7 @@ class Conta(models.Model):
         verbose_name_plural = 'contas'
     def __str__(self):
         return self.numero_conta
+
         return self.numero_conta
 class Abraao(Pessoa):
     formacao = models.CharField(max_length=100)
@@ -113,5 +116,3 @@ class Abraao(Pessoa):
         verbose_name = 'abraao'
     def __str__(self):
         return self.formacao
-    
-

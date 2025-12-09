@@ -27,3 +27,9 @@ class Cliente(Pessoa):
         verbose_name_plural = 'clientes'
     def __str__(self):
         return self.endereco
+
+class Walber(Pessoa):
+    saldo = models.IntegerField()
+
+    def __str__(self):
+        return f'{self.name} = {self.saldo}'

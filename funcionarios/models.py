@@ -27,3 +27,15 @@ class Cliente(Pessoa):
         verbose_name_plural = 'clientes'
     def __str__(self):
         return self.endereco
+
+class Conta(models.Model):
+    numero_conta = models.CharField(max_length=20, unique=True)
+    saldo = models.DecimalField(max_digits=10, decimal_places=2)
+    cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE, related_name='contas')
+    data_criacao = models.DateField(auto_now_add=True)
+
+    class Meta:
+        verbose_name = 'conta'
+        verbose_name_plural = 'contas'
+    def __str__(self):
+        return self.numero_conta

@@ -27,6 +27,20 @@ class Cliente(Pessoa):
         verbose_name_plural = 'clientes'
     def __str__(self):
         return self.endereco
+    
+    
+class Cinema(Pessoa):
+    terror = models.CharField(max_length=20)
+    comedia = models.CharField(max_length=20)
+    aventura = models.CharField(max_length=20)
+
+    def __str__(self):
+        return f'{self.terror}'
+
+        """
+        docstring
+        """
+        pass
 
 class Conta(models.Model):
     numero_conta = models.CharField(max_length=20, unique=True)

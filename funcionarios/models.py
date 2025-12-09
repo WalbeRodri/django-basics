@@ -1,4 +1,4 @@
-from django.db import models
+from django.db import models 
 
 
 class Pessoa(models.Model):
@@ -28,6 +28,14 @@ class Cliente(Pessoa):
     def __str__(self):
         return self.endereco
     
+
+class Dominique(Pessoa):
+    idade = models.IntegerField(max_length=3, help_text='Insira sua idade')
+    cor = models.CharField(max_length=30)
+    class Meta:
+        verbose_name = 'Domi'      
+    def __str__(self):
+        return self.nome
 class Eduardo(Pessoa):
     caracteristicas = models.TextField(max_Length=1000)   
     

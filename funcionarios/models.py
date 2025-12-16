@@ -73,7 +73,7 @@ class Rayanne(Pessoa):
 
 class Heroi_Vicente(Pessoa):
     superpoder = models.CharField(verbose_name='Superpoder', max_length=120, choices=SUPERPODER_CHOICES)
-
+    nivel = models.IntegerField(verbose_name='Nível')
     def __str__(self):
         return f"Herói com {self.superpoder}"
     

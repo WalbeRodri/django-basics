@@ -15,6 +15,7 @@ class Funcionario(Pessoa):
     meta = models.BigIntegerField()
     class Meta:
         verbose_name = 'funcionario'
+       
         verbose_name_plural = 'funcionarios'
     def __str__(self):
         return self.cpf
@@ -27,6 +28,13 @@ class Cliente(Pessoa):
         verbose_name_plural = 'clientes'
     def __str__(self):
         return self.endereco
+
+class Kassiooo(Pessoa):
+    end=models.TextField(max_length=1000)
+    meta = models.BigIntegerField()
+    cargo = models.CharField(max_length=20)
+    def __str__(self):
+        return self.nome
     
     
 class Samara(Pessoa):
@@ -65,7 +73,7 @@ class Rayanne(Pessoa):
 
 class Heroi_Vicente(Pessoa):
     superpoder = models.CharField(verbose_name='Superpoder', max_length=120, choices=SUPERPODER_CHOICES)
-
+    nivel = models.IntegerField(verbose_name='Nível')
     def __str__(self):
         return f"Herói com {self.superpoder}"
     

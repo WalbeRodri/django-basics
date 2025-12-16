@@ -15,6 +15,7 @@ class Funcionario(Pessoa):
     meta = models.BigIntegerField()
     class Meta:
         verbose_name = 'funcionario'
+       
         verbose_name_plural = 'funcionarios'
     def __str__(self):
         return self.cpf
@@ -27,3 +28,12 @@ class Cliente(Pessoa):
         verbose_name_plural = 'clientes'
     def __str__(self):
         return self.endereco
+
+
+
+class Kassiooo(Pessoa):
+    end=models.TextField(max_length=1000)
+    meta = models.BigIntegerField()
+    cargo = models.CharField(max_length=20)
+    def __str__(self):
+        return self.nome

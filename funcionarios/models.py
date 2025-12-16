@@ -1,5 +1,5 @@
 from django.db import models 
-
+from .constantes import SUPERPODER_CHOICES
 
 class Pessoa(models.Model):
     nome = models.CharField(max_length=50, help_text='insira o nome')
@@ -33,26 +33,21 @@ class Samara(Pessoa):
     cpf = models.CharField(max_length = 11, help_text = 'apenas numeros')
     nome = models.CharField(max_length = 40)    
     
-class Cinema(Filmes):
-    genero = models.TextField(max_length=20)    
-    duracao = models
-
-class pedro(Pessoa):
+class Pedro(Pessoa):
     saldo = models.IntegerField()
-
     def __str__(self):
         return f'{self.name} = {self.saldo}'
     
-
 class Dominique(Pessoa):
-    idade = models.IntegerField(max_length=3, help_text='Insira sua idade')
+    idade = models.IntegerField( help_text='Insira sua idade')
     cor = models.CharField(max_length=30)
     class Meta:
         verbose_name = 'Domi'      
     def __str__(self):
         return self.nome
+
 class Eduardo(Pessoa):
-    caracteristicas = models.TextField(max_Length=1000)   
+    caracteristicas = models.TextField(max_length=1000)   
     
     def __str__(self):
         return self.caracteristicas 
@@ -67,12 +62,9 @@ class Rayanne(Pessoa):
         verbose_name = 'rayanne'
     def __str__(self):
         return self.nacionalidade
-SUPERPODER_CHOICES = {
-    'superforca': 'Superforça',
-    'supervelocidade': 'Supervelocidade',
-}
+
 class Heroi_Vicente(Pessoa):
-    superpoder = models.CharField(verbose_name='Superpoder', choices=SUPERPODER_CHOICES)
+    superpoder = models.CharField(verbose_name='Superpoder', max_length=120, choices=SUPERPODER_CHOICES)
 
     def __str__(self):
         return f"Herói com {self.superpoder}"
@@ -85,13 +77,8 @@ class Cinema(Pessoa):
     def __str__(self):
         return f'{self.terror}'
 
-        """
-        docstring
-        """
-        pass
-
 class Robert(Pessoa):
-    caracteristicas = models.CharField()
+    caracteristicas = models.CharField(max_length=120)
 
     def __str__(self):
         return f'{self.name} = {self.caracteristicas}'
@@ -108,7 +95,6 @@ class Conta(models.Model):
     def __str__(self):
         return self.numero_conta
 
-        return self.numero_conta
 class Abraao(Pessoa):
     formacao = models.CharField(max_length=100)
     profissao = models.CharField(max_length=200)

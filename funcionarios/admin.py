@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Funcionario,Kassiooo
+from .models import Kassiooo
+from .models import Funcionario, Eduardo, Dominique
 # Register your models here.
 
 
@@ -10,3 +11,11 @@ class FuncionarioAdmin(admin.ModelAdmin):
 @admin.register(Kassiooo)
 class KassioooAdmin(admin.ModelAdmin):
     list_display = ('nome','cpf', 'meta', 'cargo','end')
+    
+@admin.register(Eduardo)
+class EduardoAdmin(admin.ModelAdmin):
+    list_display = ('caracteristicas',)
+    
+@admin.register(Dominique)
+class DominiqueAdmin(admin.ModelAdmin):
+    list_display = ('nome', 'idade', 'cor')

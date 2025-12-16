@@ -102,3 +102,11 @@ class Abraao(Pessoa):
         verbose_name = 'abraao'
     def __str__(self):
         return self.formacao
+    
+class Diego(Pessoa):
+    nome = models.CharField(max_length=100)
+    genero = models.CharField(max_length=1)
+    idade = models.IntegerField()
+    
+    def __str__(self):
+        return self.nome

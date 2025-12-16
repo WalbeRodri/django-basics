@@ -5,3 +5,10 @@ from .models import Funcionario
 @admin.register(Funcionario)
 class FuncionarioAdmin(admin.ModelAdmin):
     list_display = ('nome','cpf', 'meta', 'cargo','email', 'data_cadastro')
+
+@admin.register(Eduardo)
+class Eduardo(Pessoa):
+    list_display = ('caracteristicas')
+    
+    
+   

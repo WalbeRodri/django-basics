@@ -38,6 +38,11 @@ class Kassiooo(Pessoa):
     
     
 class Samara(Pessoa):
+    cpf = models.CharField(max_length=11)
+    nome = models.CharField(max_length=40)
+
+    def __str__(self):
+        return self.nome 
     cpf = models.CharField(max_length = 11, help_text = 'apenas numeros')
     nome = models.CharField(max_length = 40)    
     

@@ -30,9 +30,8 @@ class Cliente(Pessoa):
     
     
 class Samara(Pessoa):
-    cpf = models.CharField(max_length = 11, help_text = 'apenas numeros')
-    nome = models.CharField(max_length = 40)    
-    
-class Cinema(Filmes):
-    genero = models.TextField(max_length=20)    
-    duracao = models
+    cpf = models.CharField(max_length=11)
+    nome = models.CharField(max_length=40)
+
+    def __str__(self):
+        return self.nome 

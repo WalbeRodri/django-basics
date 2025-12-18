@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Funcionario, Samara
+from .models import Funcionario, Eduardo, Dominique, Kassiooo, Heroi_Vicente, Diego, Rayanne
 # Register your models here.
 
 @admin.register(Funcionario)
